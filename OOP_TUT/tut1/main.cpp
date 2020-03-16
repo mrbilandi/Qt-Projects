@@ -8,9 +8,16 @@ class M
 private:
     int x,y;
 public:
+    int w,h;
+    int area();
     void set(int a,int b);
     void show();
 };
+
+int M::area()
+{
+    return w*h;
+}
 
 void M::set(int a, int b)
 {
@@ -21,13 +28,15 @@ void M::show()
 {
     cout<< "X = "<< x<<endl;
     cout<< "Y = "<< y<<endl;
+    cout<< "Area = "<< M::area() <<endl;
 }
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
     M x;
 
-    cout<< "Hello World!"<< endl;
+    x.w = 4;x.h=9;
+
     x.set(2,5);
     x.show();
     return a.exec();
