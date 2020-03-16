@@ -6,12 +6,13 @@ using namespace std;
 class M
 {
 public:
-    void show()
-    {
-        cout<< "Welcome!"<< endl;
-    }
+    void show();
 };
 
+void M::show()
+{
+    cout<< "Welcome!"<< endl;
+}
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
