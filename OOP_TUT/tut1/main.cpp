@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     char n[20];
-    cin.getline(n,20);
+    cin>>n;
 
     cout<< n<< endl;
 
