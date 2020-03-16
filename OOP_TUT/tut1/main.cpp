@@ -1,4 +1,3 @@
-#include <QCoreApplication>
 #include <iostream>
 
 using namespace std;
@@ -10,6 +9,10 @@ private:
     int area();
 public:
     M(int,int,int);
+    int Area(){
+        return area();
+    }
+
     ~M();
 };
 
@@ -20,18 +23,12 @@ int M::area(){
 }
 M::~M()
 {
-    cout<< "volume = "<< M::area()<< endl;
+    cout<< "Deconstructor called" << endl;
 }
-int main(int argc, char *argv[])
-{
-    QCoreApplication a(argc, argv);
+int main()
+{    
 
+    M cub(3,5,7);
+    cout << "Area : " << cub.Area() << endl;
 
-    // parametric constructor
-    {
-        cout << "parametric constructor : ";
-        M cub(3,5,7);
-    }
-
-    return a.exec();
 }
