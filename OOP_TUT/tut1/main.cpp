@@ -33,6 +33,12 @@ void M::show()
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
+
+    char n[20];
+    cin.getline(n,20);
+
+    cout<< n<< endl;
+
     M x;
 
     x.w = 4;x.h=9;
