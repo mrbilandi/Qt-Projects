@@ -6,44 +6,28 @@ using namespace std;
 class M
 {
 private:
-    int x,y;
+    int x,y,z;
 public:
-    int w,h;
-    int area();
-    void set(int a,int b);
-    void show();
+    M();
+    ~M();
 };
 
-int M::area()
+M::M()
 {
-    return w*h;
+    x=2;y=3;z=4;
 }
 
-void M::set(int a, int b)
+M::~M()
 {
-    x=a;y=b;
-}
-
-void M::show()
-{
-    cout<< "X = "<< x<<endl;
-    cout<< "Y = "<< y<<endl;
-    cout<< "Area = "<< M::area() <<endl;
+    cout<< "volume = "<< x*y*z<< endl;
 }
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    char n[20];
-    cin>>n;
+    {
+        M cub;
+    }
 
-    cout<< n<< endl;
-
-    M x;
-
-    x.w = 4;x.h=9;
-
-    x.set(2,5);
-    x.show();
     return a.exec();
 }
