@@ -19,10 +19,8 @@ M::M()
     x=2;y=3;z=4;
 }
 
-M::M(int w, int h, int l)
-{
-    x=w;y=h;z=l;
-}
+M::M(int w, int h, int l):x(w),y(h),z(l)
+{}
 
 M::M(M &m)
 {
