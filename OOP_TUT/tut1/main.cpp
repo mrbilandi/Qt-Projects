@@ -1,11 +1,24 @@
 #include <QCoreApplication>
 #include <iostream>
 
+using namespace std;
+
+class M
+{
+public:
+    void show()
+    {
+        cout<< "Welcome!"<< endl;
+    }
+};
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
+    M x;
 
+    cout<< "Hello World!"<< endl;
 
-    std::cout << "Hello World!"<<std::endl;
+    x.show();
     return a.exec();
 }
