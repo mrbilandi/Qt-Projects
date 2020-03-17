@@ -6,20 +6,17 @@ class M
 {
 private:
     int x,y,z;
-    int area();
+    friend int area(M dim);
 public:
     M(int,int,int);
-    int Area(){
-        return area();
-    }
 
     ~M();
 };
 
 M::M(int w, int h, int l):x(w),y(h),z(l)
 {}
-int M::area(){
-    return x*y*z;
+int area(M dim){
+    return dim.x*dim.y*dim.z;
 }
 M::~M()
 {
@@ -29,6 +26,6 @@ int main()
 {    
 
     M cub(3,5,7);
-    cout << "Area : " << cub.Area() << endl;
+    cout << "Area : " << area(cub) << endl;
 
 }
